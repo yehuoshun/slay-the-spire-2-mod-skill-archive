@@ -4,7 +4,8 @@
 
 ### Added
 - `references/energy/` — 新增 energy 模块（自定义能量图标，5 文件）
-- 同步今日新增内容到 `references/`：自定义能力音效 Transpiler 模式、energy 模块
+- `references/card/card-variables.md` — 新增 card-variables（卡牌自定义动态变量）
+- 同步今日新增内容到 `references/`：harmony-custom-power-sfx（自定义能力音效 Transpiler 模式）
 
 ### Changed
 - 主仓库同步：20 个超 4000 字符引用文件拆为 61+ 子文件（结构重构）
