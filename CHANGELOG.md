@@ -3,15 +3,12 @@
 ## [2026-09-19]
 
 ### Added
-- `references/energy/` — 新增 energy 模块（自定义能量图标，5 文件）
 - `references/card/card-variables.md` — 新增 card-variables（卡牌自定义动态变量）
-- 同步今日新增内容到 `references/`：harmony-custom-power-sfx（自定义能力音效 Transpiler 模式）
+- 主仓库结构同步：各模块根目录放置当前版本文件
 
 ### Changed
-- 主仓库同步：20 个超 4000 字符引用文件拆为 61+ 子文件（结构重构）
-- `baselib/` 跟进 v3.4.7 版本记录
-- `settings/` 补充 CollapsedByDefault 文档
-- `power/` 补充自定义音效节
+- 重构 archive 目录结构：旧版本从 `module-v1.md` 改为 `v1/module.md` 目录式管理
+- 影响模块：act, baselib, card, character, enchantment, event, harmony, modifier, monster, orb, pet, potion, power, relic, serialization, setup
 
 ### Removed
 - 移除临时快照目录 `snapshot-2026-09-19/`

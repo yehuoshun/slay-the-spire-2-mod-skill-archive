@@ -4,6 +4,7 @@
 
 ## 目录结构
 
-- `references/` — 各模块的旧版本参考文档 (v1/v2/v3) + 新增模块同步
+- `references/<模块>/` — 当前版本参考文档
+- `references/<模块>/v1/`, `v2/`, `v3/` — 旧版本归档
 - `README.old.md` — 旧版 README
 - [`CHANGELOG.md`](./CHANGELOG.md) — 归档变更记录
