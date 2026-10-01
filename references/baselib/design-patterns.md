@@ -1,6 +1,6 @@
 # 纯原生设计模式总纲（从 BaseLib 提炼）
 
-> 模式 2「链式辅助方法」签名校正（`CardPlayState` → `CardPlay`，对齐 card）。旧版存档见 [archive](https://github.com/yehuoshun/slay-the-spire-2-mod-skill-archive/blob/main/references/baselib/design-patterns-v1.md)。
+> 模式 2「链式辅助方法」签名校正（`CardPlayState` → `CardPlay`，对齐 card）。旧版存档见 [archive](https://github.com/yehuoshun/slay-the-spire-2-mod-skill-archive/blob/main/references/baselib/v1/design-patterns.md)。
 
 > 本 skill 主推**纯原生**开发：只靠 `0Harmony.dll` + `sts2.dll`，零第三方依赖。
 > BaseLib 是优秀的设计参考，本文件把它所有便利机制**转译为纯原生实现**，作为各模块子项的通用地基。
@@ -16,7 +16,7 @@
 
 ## 旧版存档
 
-- 本文件旧版：[design-patterns-v1.md](https://github.com/yehuoshun/slay-the-spire-2-mod-skill-archive/blob/main/references/baselib/design-patterns-v1.md)
+- 本文件旧版：[design-patterns-v1.md](https://github.com/yehuoshun/slay-the-spire-2-mod-skill-archive/blob/main/references/baselib/v1/design-patterns.md)
 - 完整旧版本仓库：[yehuoshun/slay-the-spire-2-mod-skill-archive](https://github.com/yehuoshun/slay-the-spire-2-mod-skill-archive)
 
 
@@ -26,7 +26,9 @@
 | 内容 | 文件 |
 |------|------|
 | 自动注册与链式辅助 | [design-patterns-core.md](design-patterns-core.md) |
+| [Pool] 基类注解继承 | [design-patterns-pooling.md](design-patterns-pooling.md) |
 | 便捷 override 与内联本地化 | [design-patterns-extras.md](design-patterns-extras.md) |
+| 资源路径工具与卡池卡背 | [design-patterns-assets.md](design-patterns-assets.md) |
 | 常见坑与映射 | [design-patterns-pitfalls.md](design-patterns-pitfalls.md) |
 
 ## 演进路线
