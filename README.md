@@ -1,12 +1,14 @@
 # Slay the Spire 2 Mod 开发 Skill
 
-> 🗄️ 存档仓库 — 旧版本 references 的历史归档。当前版本在主仓库 [yehuoshun/slay-the-spire-2-mod-skill](https://github.com/yehuoshun/slay-the-spire-2-mod-skill)。
+> 杀戮尖塔 2 纯原生 Mod 开发，零第三方依赖。
 
 ---
 
 ## 目录
 
 - [SKILL.md](SKILL.md) — AI 工作流 + 15 条硬规则
+- [LEARN.md](LEARN.md) — 学习流程
+- [LEARNED.md](LEARNED.md) — 已学仓库登记（防重复学习）
 
 ### references/
 
@@ -16,7 +18,8 @@
 |------|------|------|
 | `setup/` | [environment-setup.md](references/setup/environment-setup.md) | 环境搭建、创建项目、PCK 打包、调试（教程） |
 | `setup/` | [project-skeleton.md](references/setup/project-skeleton.md) | 生产级项目骨架（目录规范 + 路径检测 + 自动打 PCK） |
-| `setup/` | [rider.md](references/setup/rider.md) | Rider 开发环境配置（代码检查、Harmony 抑制规则） |
+| `setup/` | [template-pack.md](references/setup/template-pack.md) | dotnet new 模板打包（三套官方模板、template.json、symbols） |
+| `setup/` | [rider.md](references/setup/rider.md) | Rider 开发环境配置（代码检查、Live Templates） |
 | `setup/` | [mod-manifest.md](references/setup/mod-manifest.md) | 模组清单 JSON（字段说明、纯原生方案） |
 | `setup/` | [export-presets.md](references/setup/export-presets.md) | 导出预设 export_presets.cfg（PCK 打包必需） |
 | `setup/` | [project-godot.md](references/setup/project-godot.md) | Godot 项目配置 project.godot（字段说明） |
@@ -44,10 +47,6 @@
 | `serialization/` | [serialization.md](references/serialization/serialization.md) | 序列化与注册（ModelDb、SavedProperty、InjectTypeIntoCache） |
 | `settings/` | [settings.md](references/settings/settings.md) | 设置界面（BaseLib SimpleModConfig、Attribute、本地化） |
 | `baselib/` | [design-patterns.md](references/baselib/design-patterns.md) | 纯原生设计模式总纲（从 BaseLib 提炼，零第三方依赖） |
-
----
-
-> 此仓库为 v1/v2/v3 旧版参考文档的只读归档。新增 reference 请提交到主仓库。
 
 ---
 
