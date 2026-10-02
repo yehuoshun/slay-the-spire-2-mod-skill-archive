@@ -2,6 +2,9 @@
 
 ## [2026-10-02]
 
+### Changed
+- **同步策略定案**：archive 只同步 `references/` 文件夹，references 以外（SKILL.md/LEARN.md/LEARNED.md/README.md）一律不跟主仓库（本地副本冻结）
+
 ### Added
 - **v4 归档（第四代）**：补齐 9-10 月断档的版本留档 — 23 个模块统一推进到 v4（当前版快照；reward 与 v1 无差异保持不动），multiplayer 首次入档
 - 影响模块：baselib, card, energy, harmony, multiplayer, pile, resource, rest-site, serialization, settings, setup（新生成）+ act, badge, character, enchantment, event, modifier, monster, orb, pet, potion, power, relic（v3 后演进定格）

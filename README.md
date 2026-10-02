@@ -6,9 +6,9 @@
 
 ## 目录
 
-- [SKILL.md](SKILL.md) — AI 工作流 + 16 条硬规则（与主仓库同步）
-- [LEARN.md](LEARN.md) — 学习流程 + 备份同步流程（与主仓库同步）
-- [LEARNED.md](LEARNED.md) — 已学仓库登记，防重复学习（与主仓库同步）
+- [SKILL.md](SKILL.md) — AI 工作流 + 16 条硬规则（archive 本地副本，不随主仓库更新）
+- [LEARN.md](LEARN.md) — 学习流程 + 备份同步流程（archive 本地副本，不随主仓库更新）
+- [LEARNED.md](LEARNED.md) — 已学仓库登记，防重复学习（archive 本地副本，不随主仓库更新）
 
 ### references/
 
