@@ -2,6 +2,8 @@
 
 > 杀戮尖塔 2 纯原生 Mod 开发，零第三方依赖。
 
+> ⚠️ 本 README 为 archive 仓库**定制存档说明**，人工维护，**不随主仓库同步更新**。`references/` 与 `SKILL.md` 由同步流程自动更新（见 LEARN.md「备份仓库同步流程」）；主仓库 README 见 [yehuoshun/slay-the-spire-2-mod-skill](https://github.com/yehuoshun/slay-the-spire-2-mod-skill)。
+
 ---
 
 ## 目录
