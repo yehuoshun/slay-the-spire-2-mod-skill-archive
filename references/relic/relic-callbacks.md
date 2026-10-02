@@ -59,5 +59,21 @@ public static class IroncladStartingRelicsPatch
 
 ---
 
-实战代码片段见 [relic-patterns.md](relic-patterns.md）。
+## 数值 / 奖励修改钩子
+
+> 实战项目验证（YuWanCard 真实代码）。除事件钩子外，遗物还可覆写以下数值/奖励修改钩子。
+
+| `ModifyDamageMultiplicative` | `decimal ModifyDamageMultiplicative(Creature? target, decimal amount, ValueProp props, Creature? dealer, CardModel? cardSource)` | 伤害倍率 |
+| `ModifyBlockMultiplicative` | `decimal ModifyBlockMultiplicative(Creature target, decimal block, ValueProp props, CardModel? cardSource, CardPlay? cardPlay)` | 格挡倍率 |
+| `ModifyMaxEnergy` | `decimal ModifyMaxEnergy(Player player, decimal amount)` | 最大能量 |
+| `ModifyHandDraw` | `decimal ModifyHandDraw(Player player, decimal count)` | 抽牌数（⚠️ decimal 非 int） |
+| `ModifyRestSiteHealAmount` | `decimal ModifyRestSiteHealAmount(Creature creature, decimal amount)` | 休息处回复（⚠️ 第一参 Creature） |
+| `ModifyGoldGained` | `decimal ModifyGoldGained(Player player, decimal amount)` | 金币获得量 |
+| `ModifyPowerAmountGivenAdditive` | `decimal ModifyPowerAmountGivenAdditive(PowerModel, Creature giver, decimal, Creature? target, CardModel?)` | 施加量加减 |
+| `ModifyPowerAmountGivenMultiplicative` | 同上 | 施加量乘除 |
+| `TryModifyRewards` | `bool TryModifyRewards(Player, List<Reward>, AbstractRoom?)` | 战斗奖励（⚠️ 3 参） |
+| `TryModifyCardRewardOptions` | `bool TryModifyCardRewardOptions(Player, List<CardCreationResult>, CardCreationOptions)` | 替换奖励卡牌 |
+| `AfterModifyingGoldGained` | `Task AfterModifyingGoldGained(Player player, decimal amount)` | 金币修改后副作用 |
+
+> 金币修改防递归（`_modifyingGold` 守卫）见 [relic-patterns.md](relic-patterns.md)。
 

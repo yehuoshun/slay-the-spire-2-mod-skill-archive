@@ -14,10 +14,10 @@ using MegaCrit.Sts2.Core.Models;
 [HarmonyPatch]
 public static class CustomEnergyTextIconPatch
 {
-    // 动态定位 private 类型
+    // 动态定位 private 类型（RuntimeTypeResolver.FindType 为自研辅助，等价 AccessTools.TypeByName）
     private static MethodBase? TargetMethod()
     {
-        var type = RuntimeTypeResolver.FindType(
+        var type = AccessTools.TypeByName(
             "MegaCrit.Sts2.Core.Localization.Formatters." +
             "EnergyIconsFormatter");
         return AccessTools.Method(type, "TryEvaluateFormat");
@@ -61,7 +61,7 @@ public static class CustomEnergyTextIconPatch
 
     private static string ResolveTextIcon(string prefix, string oldText)
     {
-        var pool = EnergyIconHelper.DecodePool<AbstractModel>(prefix);
+        var pool = ModEnergyIconCodec.DecodePool<AbstractModel>(prefix);
         if (pool is ICustomEnergyIcon { TextIconPath: string path })
             return $"[img]{path}[/img]"; // BBCode 图片标签
         return oldText;
