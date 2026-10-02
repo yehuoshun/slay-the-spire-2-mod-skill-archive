@@ -47,8 +47,8 @@
 | `pet/` | [pet.md](references/pet/pet.md) | 自定义宠物（固定不行动 AI、血条、场景） |
 | `resource/` | [resource.md](references/resource/resource.md) | 自定义资源（法力/怒气等 + 卡牌费用 + UI） |
 | `badge/` | [badge.md](references/badge/badge.md) | 自定义模组徽章（Badge 继承、图标、注册） |
-| `rest-site/` | [rest-site.md](references/rest-site/rest-site.md) | 自定义休息点选项（RestSiteOption 继承、图标、注入） |
-| `pile/` | [pile.md](references/pile/pile.md) | 自定义牌堆（PileType注入、定位、动画） |
+| `rest-site/` | [rest-site.md](references/rest-site/rest-site.md) | 自定义休息点选项（OptionId + OnSelect、TryModifyRestSiteOptions 注入） |
+| `pile/` | [pile.md](references/pile/pile.md) | 自定义牌堆（PileType 注入、CardPile 继承、注册、Patch） |
 | `reward/` | [reward.md](references/reward/reward.md) | 自定义奖励（RewardType 注入、序列化、示例） |
 | `energy/` | [energy.md](references/energy/energy.md) | 自定义能量（图标、类型、视觉效果） |
 | `harmony/` | [harmony.md](references/harmony/harmony.md) | Harmony 补丁模式（PatchCategory、安全、组织规范） |
@@ -64,8 +64,12 @@
 
 1. **硬规则驱动**：所有行为由硬规则约束，不靠"建议"
 2. **知识注入**：代码模板和 API 参考在 references 中持续积累
-3. **Actions 通知**：提交后由 GitHub Actions 发钉钉通知；本仓库为**文档型**（无 C# 代码可编译），编译验证需在本地 Rider / 游戏环境完成，agent 负责静态检查 + push
+3. **真编译验证闭环**：文档（唯一创作源）→ [sts2-mod-examples](https://github.com/yehuoshun/sts2-mod-examples) 可编译示例 → CI 真编译（dotnet build + API 白名单 + 本地化校验）→ 报错回流修文档；本仓库为**文档型**（无 C# 代码），编译验证走示例仓库 CI，agent 负责静态检查 + push
 4. **零第三方依赖**：只靠 `0Harmony.dll` + `sts2.dll`
+
+## 版本归档
+
+> references 下每个模块的 `v1/`-`v4/` 目录是旧版本留档（只读，**不要动**）；当前版文件直接放在 `references/<模块>/` 根目录。大改前先留档（当前版复制为 `v<N+1>`）再同步新内容。
 
 ---
 
@@ -75,6 +79,7 @@
 
 - [Alchyr/BaseLib-StS2](https://github.com/Alchyr/BaseLib-StS2) — 官方模组标准库（Custom*Model 基类、[Pool]、Builder、工具）
 - [Alchyr/ModTemplate-StS2](https://github.com/Alchyr/ModTemplate-StS2) — 官方模组脚手架模板（工程化思想：骨架自动化、路径检测、目录规范）
+- [YuWan886/Sts2-YuWanCard](https://github.com/YuWan886/Sts2-YuWanCard) — 实战大型 mod（真实 API 用法样本：多人、自定义稀有度、多版本 loader、生命条预测）
 
 ### 项目仓库
 
