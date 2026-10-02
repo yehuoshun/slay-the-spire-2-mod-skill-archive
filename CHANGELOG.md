@@ -1,5 +1,15 @@
 # Changelog
 
+## [2026-10-02]
+
+### Added
+- **v4 归档（第四代）**：补齐 9-10 月断档的版本留档 — 23 个模块统一推进到 v4（当前版快照；reward 与 v1 无差异保持不动），multiplayer 首次入档
+- 影响模块：baselib, card, energy, harmony, multiplayer, pile, resource, rest-site, serialization, settings, setup（新生成）+ act, badge, character, enchantment, event, modifier, monster, orb, pet, potion, power, relic（v3 后演进定格）
+- 主仓库同步：89ed2ed（全量 md 体检修复 4 处）
+
+### Changed
+- README 参考资料表全面更新：settings 改纯原生表述（ConfigFile + NSubmenu UI）、新增 multiplayer 行、setup 补全至 17 个文件、serialization 补自动注册框架
+
 ## [2026-09-19]
 
 ### Added
