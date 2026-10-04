@@ -1,5 +1,18 @@
 # Changelog
 
+## [2026-10-04]
+
+### Added
+- `references/multiplayer/multiplayer-netactions.md` — 网络行动（GameAction/INetAction 骨架、GameActionType 语义、PlayPhase 门控、IsPlayerReadyToEndTurn、执行失败 rethrow、模型状态防护）
+- `references/harmony/harmony-transpiler.md` — Transpiler 泛型 operand 结构判定 + 自定义 comparer 相等返 0 保确定性
+
+### Changed
+- `references/resource/resource-lifecycle.md` — 补自定义图标预加载（Patch `PreloadManager.GetRunAssetPaths`）
+- `references/settings/settings-core.md` — 补延迟注册需等 `LocManager.Instance` 就绪
+- `references/multiplayer/multiplayer.md`/`multiplayer-core.md`/`harmony.md`/`index.md` — 导航与索引同步
+- 主仓库同步：48d90fe（学 YuWanCard 2026-10-04 增量）
+- README 参考资料表补 2 行（harmony-transpiler / multiplayer-netactions）
+
 ## [2026-10-02]
 
 ### Changed
