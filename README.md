@@ -1,66 +1,65 @@
-# Slay the Spire 2 Mod 开发 Skill
+# Slay the Spire 2 Mod 开发 Skill（archive）
 
 > 杀戮尖塔 2 纯原生 Mod 开发，零第三方依赖。
 
-> ⚠️ 本 README 为 archive 仓库**定制存档说明**，人工维护，**不随主仓库同步更新**。`references/` 与 `SKILL.md` 由同步流程自动更新（见 LEARN.md「备份仓库同步流程」）；主仓库 README 见 [yehuoshun/slay-the-spire-2-mod-skill](https://github.com/yehuoshun/slay-the-spire-2-mod-skill)。
+> ⚠️ 本仓库是主仓库 [yehuoshun/slay-the-spire-2-mod-skill](https://github.com/yehuoshun/slay-the-spire-2-mod-skill) 的**备份镜像**：`references/` 与 `SKILL.md` 由同步流程自动更新，README 为人工维护的定制存档说明（不随主仓库同步）。首次使用请以主仓库为准。
 
 ---
 
 ## 目录
 
-- [SKILL.md](SKILL.md) — AI 工作流 + 16 条硬规则（与主仓库同步）
-- [LEARN.md](LEARN.md) — 学习流程 + 备份同步流程（archive 本地副本，不随主仓库更新）
-- [LEARNED.md](LEARNED.md) — 已学仓库登记，防重复学习（archive 本地副本，不随主仓库更新）
+| 文件 | 说明 |
+|------|------|
+| [SKILL.md](SKILL.md) | AI 工作流 + 硬规则（与主仓库同步） |
+| [LEARN.md](LEARN.md) | 学习流程 + 备份同步流程（本仓库副本，不随主仓库更新） |
+| [LEARNED.md](LEARNED.md) | 已学仓库登记，防重复学习（本仓库副本，不随主仓库更新） |
+| [references/](references/) | 知识文档（与主仓库同步），见下方模块索引 |
 
-### references/
+## references 模块索引
 
-> 📌 每个模块的 `xx.md` 为导航页（概述 + 常见问题 + **章节导航表**），正文按章节拆分在 `xx-*.md` 子文件中。读模块时先开导航页，再按需读子文件。
+> 📌 每个模块的 `xx.md` 为**导航页**（概述 + 常见问题 + 章节导航表），正文按章节拆分在 `xx-*.md`。读模块先开导航页，再按需读子文件。`setup/` 无独立导航页，入口见环境与工程小节。
 
-| 分类 | 文件 | 内容 |
-|------|------|------|
-| `setup/` | [environment-setup.md](references/setup/environment-setup.md) | 环境搭建、创建项目、PCK 打包、调试（教程） |
-| `setup/` | [project-skeleton.md](references/setup/project-skeleton.md) | 生产级项目骨架（目录规范 + 路径检测 + 自动打 PCK） |
-| `setup/` | [skeleton-directory.md](references/setup/skeleton-directory.md) | 骨架目录规范（各目录职责） |
-| `setup/` | [skeleton-paths.md](references/setup/skeleton-paths.md) | 游戏路径自动探测（Sts2PathDiscovery.props） |
-| `setup/` | [skeleton-build.md](references/setup/skeleton-build.md) | 构建流程与自动部署 |
-| `setup/` | [skeleton-build-targets.md](references/setup/skeleton-build-targets.md) | 自定义 MSBuild Target |
-| `setup/` | [template-pack.md](references/setup/template-pack.md) | dotnet new 模板打包（三套官方模板、template.json、symbols） |
-| `setup/` | [template-pack-json.md](references/setup/template-pack-json.md) | template.json 字段详解 |
-| `setup/` | [rider.md](references/setup/rider.md) | Rider 开发环境配置（代码检查、Live Templates） |
-| `setup/` | [rider-live-templates.md](references/setup/rider-live-templates.md) | Rider Live Templates 速查 |
-| `setup/` | [mod-manifest.md](references/setup/mod-manifest.md) | 模组清单 JSON（字段说明、纯原生方案） |
-| `setup/` | [export-presets.md](references/setup/export-presets.md) | 导出预设 export_presets.cfg（PCK 打包必需） |
-| `setup/` | [project-godot.md](references/setup/project-godot.md) | Godot 项目配置 project.godot（字段说明） |
-| `setup/` | [loader-variants.md](references/setup/loader-variants.md) | 加载器方案（BepInEx vs 原生 mods 目录） |
-| `setup/` | [ci-build.md](references/setup/ci-build.md) | CI 构建与打包（GitHub Actions 流水线） |
-| `setup/` | [ci-build-package.md](references/setup/ci-build-package.md) | CI 打包发布流程 |
-| `setup/` | [ci-build-pck.md](references/setup/ci-build-pck.md) | CI 导出 PCK 资源包 |
-| `relic/` | [relic.md](references/relic/relic.md) | 自定义遗物（代码模板、稀有度、池、图标、本地化） |
-| `card/` | [card.md](references/card/card.md) | 自定义卡牌（构造函数、API 速查、卡池、肖像、本地化） |
-| `potion/` | [potion.md](references/potion/potion.md) | 自定义药水（属性、回调、图标、池、本地化） |
-| `enchantment/` | [enchantment.md](references/enchantment/enchantment.md) | 自定义附魔（回调、附魔、本地化、图标） |
-| `event/` | [event.md](references/event/event.md) | 自定义事件（选项、多页、先古之民、Patch、本地化） |
-| `power/` | [power.md](references/power/power.md) | 自定义能力（Buff/Debuff、属性、回调、本地化） |
-| `character/` | [character.md](references/character/character.md) | 自定义角色（卡池/遗物池/药水池、场景资源、注册） |
-| `monster/` | [monster.md](references/monster/monster.md) | 自定义敌怪 & 遭遇（状态机、AI 行为树、注册） |
-| `modifier/` | [modifier.md](references/modifier/modifier.md) | 自定义 Modifier（运行规则、Alignment、注册、效果实现） |
-| `orb/` | [orb.md](references/orb/orb.md) | 自定义球体（被动/激发、图标、精灵、随机池） |
-| `act/` | [act.md](references/act/act.md) | 自定义章节（地图背景、音乐、宝箱、房间配置） |
-| `pet/` | [pet.md](references/pet/pet.md) | 自定义宠物（固定不行动 AI、血条、场景） |
-| `resource/` | [resource.md](references/resource/resource.md) | 自定义资源（法力/怒气等 + 卡牌费用 + UI） |
-| `badge/` | [badge.md](references/badge/badge.md) | 自定义模组徽章（Badge 继承、图标、注册） |
-| `rest-site/` | [rest-site.md](references/rest-site/rest-site.md) | 自定义休息点选项（OptionId + OnSelect、TryModifyRestSiteOptions 注入） |
-| `pile/` | [pile.md](references/pile/pile.md) | 自定义牌堆（PileType 注入、CardPile 继承、注册、Patch） |
-| `reward/` | [reward.md](references/reward/reward.md) | 自定义奖励（RewardType 注入、序列化、示例） |
-| `energy/` | [energy.md](references/energy/energy.md) | 自定义能量（图标、类型、视觉效果） |
-| `harmony/` | [harmony.md](references/harmony/harmony.md) | Harmony 补丁模式（PatchCategory、安全、组织规范） |
-| `harmony/` | [harmony-custom-power-sfx.md](references/harmony/harmony-custom-power-sfx.md) | Transpiler 实战：自定义能力音效（零第三方依赖） |
-| `harmony/` | [harmony-transpiler.md](references/harmony/harmony-transpiler.md) | Transpiler：泛型 operand 结构匹配、自定义 comparer 确定性排序 |
-| `serialization/` | [serialization.md](references/serialization/serialization.md) | 序列化与注册（ModelDb、SavedProperty、InjectTypeIntoCache、自动注册框架） |
-| `settings/` | [settings.md](references/settings/settings.md) | 设置界面（纯原生：ConfigFile 持久化 + NSubmenu UI + 主菜单注入） |
-| `baselib/` | [design-patterns.md](references/baselib/design-patterns.md) | 纯原生设计模式总纲（从 BaseLib 提炼，零第三方依赖） |
-| `multiplayer/` | [multiplayer.md](references/multiplayer/multiplayer.md) | 多人模式（约束声明、身份检查、网络消息） |
-| `multiplayer/` | [multiplayer-netactions.md](references/multiplayer/multiplayer-netactions.md) | 网络行动（GameAction/INetAction）、阶段门控、交互状态防护 |
+### 环境与工程
+
+| 模块 | 入口 |
+|------|------|
+| setup（环境/骨架/构建/CI/loader） | [environment-setup.md](references/setup/environment-setup.md)（全文件平级，见该目录） |
+
+### 内容模块（导航页入口）
+
+| 模块 | 导航页 |
+|------|--------|
+| relic 遗物 | [relic.md](references/relic/relic.md) |
+| card 卡牌 | [card.md](references/card/card.md) |
+| potion 药水 | [potion.md](references/potion/potion.md) |
+| enchantment 附魔 | [enchantment.md](references/enchantment/enchantment.md) |
+| event 事件 | [event.md](references/event/event.md) |
+| power 能力 | [power.md](references/power/power.md) |
+| character 角色 | [character.md](references/character/character.md) |
+| monster 敌怪 & 遭遇 | [monster.md](references/monster/monster.md) |
+| modifier 修改器 | [modifier.md](references/modifier/modifier.md) |
+| orb 球体 | [orb.md](references/orb/orb.md) |
+| act 章节 | [act.md](references/act/act.md) |
+| pet 宠物 | [pet.md](references/pet/pet.md) |
+| resource 自定义资源 | [resource.md](references/resource/resource.md) |
+| badge 徽章 | [badge.md](references/badge/badge.md) |
+| rest-site 休息点 | [rest-site.md](references/rest-site/rest-site.md) |
+| pile 牌堆 | [pile.md](references/pile/pile.md) |
+| reward 奖励 | [reward.md](references/reward/reward.md) |
+| energy 能量 | [energy.md](references/energy/energy.md) |
+
+### 横切能力
+
+| 模块 | 导航页 |
+|------|--------|
+| harmony 补丁 | [harmony.md](references/harmony/harmony.md) |
+| serialization 序列化与注册 | [serialization.md](references/serialization/serialization.md) |
+| settings 设置界面 | [settings.md](references/settings/settings.md)（+ [modconfig.md](references/settings/modconfig.md)） |
+| baselib 纯原生设计模式 | [design-patterns.md](references/baselib/design-patterns.md) |
+| multiplayer 多人模式 | [multiplayer.md](references/multiplayer/multiplayer.md) |
+| overlay 游戏内覆写 | [overlay.md](references/overlay/overlay.md) |
+| ui 手牌/战斗 UI | [ui.md](references/ui/ui.md) |
+| run Run 生命周期 | [run.md](references/run/run.md) |
 
 ---
 
@@ -73,7 +72,7 @@
 
 ## 版本归档
 
-> references 下每个模块的 `v1/`-`v4/` 目录是旧版本留档（只读，**不要动**）；当前版文件直接放在 `references/<模块>/` 根目录。大改前先留档（当前版复制为 `v<N+1>`）再同步新内容。
+> `references/<模块>/v1/`-`v4/` 是旧版本留档（只读，**不要动**）；当前版直接放在 `references/<模块>/` 根目录。大改前先留档（当前版复制为 `v<N+1>`）再同步新内容。
 
 ---
 
@@ -84,12 +83,15 @@
 - [Alchyr/BaseLib-StS2](https://github.com/Alchyr/BaseLib-StS2) — 官方模组标准库（Custom*Model 基类、[Pool]、Builder、工具）
 - [Alchyr/ModTemplate-StS2](https://github.com/Alchyr/ModTemplate-StS2) — 官方模组脚手架模板（工程化思想：骨架自动化、路径检测、目录规范）
 - [YuWan886/Sts2-YuWanCard](https://github.com/YuWan886/Sts2-YuWanCard) — 实战大型 mod（真实 API 用法样本：多人、自定义稀有度、多版本 loader、生命条预测）
+- [lf201014/STS2_MarisaMod](https://github.com/lf201014/STS2_MarisaMod) — 实战角色 mod（增幅卡系统、动画状态机、角色资源覆写、AsyncLocal 异步 Patch）
+- [s1f102500012/sts2mod](https://github.com/s1f102500012/sts2mod) — 多聚合 mod 合集（15 项全学：overlay/角色/附魔/符文/Run 生命周期/UI/补丁框架 等）
+- [s1f102500012/HextechRunes](https://github.com/s1f102500012/HextechRunes) — 海克斯符文独立仓库（9 万行级巨型 mod 工程模式）
 
 ### 项目仓库
 
-- [yehuoshun/slay-the-spire-2-mod-skill-archive](https://github.com/yehuoshun/slay-the-spire-2-mod-skill-archive) — 旧版本 references 存档（含 v1/v2 版本记录）
+- [yehuoshun/slay-the-spire-2-mod-skill](https://github.com/yehuoshun/slay-the-spire-2-mod-skill) — 主仓库（唯一创作源）
+- [yehuoshun/sts2-mod-examples](https://github.com/yehuoshun/sts2-mod-examples) — 可编译示例仓库（CI 验证闭环）
 
 ### 不活跃仓库
 
-- [烟汐忆梦_YM](https://space.bilibili.com/481430814) — 9 篇教程（环境搭建、遗物、卡牌、药水、附魔、事件&先古之民、能力、角色、敌怪&遭遇）
-
+- [烟汐忆梦_YM](https://space.bilibili.com/481430814) — 9 篇入门教程（见 LEARNED.md 清单）
